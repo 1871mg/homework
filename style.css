@@ -1,0 +1,27 @@
+.header {
+background-color: #cc55ff;
+}
+
+.content {
+background: red;
+}
+
+#footer {
+background: yellow;
+}
+
+.level-2 {
+font-size: 50px;
+color: #363636; /*не работает*/
+text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+text-align: center;
+}
+
+/*div {
+height: 200px;
+width: 50%;
+}
+работает, но криво отображает*/ 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Homework 6</title>
+    <script src="plotly-latest.min.js"></script>
+</head>
+<body>    
+	<div id="placeholder" style="width: 1000px; height: 600px;"></div>
+	<script>
+	 	var axisX = [];
+    		for (var x = -5; x < 5; x += 0.01) {
+            	axisX.push(x);
+    		};
+    	function calc() {
+        	var axisY = [];
+        	for (var i = 0; i < axisX.length; i++) {
+            	if (axisX[i] < 1) {
+                	axisY.push(axisX[i] * axisX[i] - 4 * axisX[i])
+            	} else if (axisX[i] >= 1) {
+                		axisY.push(5 / axisX[i])
+                   	}
+        	};
+       	return axisY;
+    	};
+    	window.line1 = {
+	        y: calc(),
+    	    x: axisX,
+        	type: 'scatter'
+	    };
+		var data = [line1];
+		Plotly.newPlot('placeholder',data);
+	</script>
+</body>
+</html>
